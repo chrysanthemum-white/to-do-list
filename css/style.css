@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: 'Noto Sans', 'Noto Sans KR', sans-serif;
+  margin: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.snowflake {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: -8px;
+}
+
+.snowflake:nth-of-type(2n) {
+  width: 4px;
+  height: 4px;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.snowflake:nth-of-type(2n + 1) {
+  width: 6px;
+  height: 6px;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.snowflake:nth-of-type(9n) {
+  width: 5px;
+  height: 5px;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+@keyframes fall {
+  from {
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* ↑ Snow mapping */
+
+.hidden {
+  display: none;
+}
+
+.text {
+  color: #fff;
+}
+
+.relative {
+  position: relative;
+}
+
+/* ↑ Default settings */
+
+#user-form input[type='text'] {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+#user-form input[type='text']::placeholder {
+  color: white;
+}
+
+#user-form input[type='submit'] {
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 30px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+
+#clock {
+  font-size: 100px;
+  text-shadow: 5px 5px #0b1d33, 8px 8px #07142b, 11px 11px #000000;
+}
+
+#user-title {
+  font-size: 50px;
+  text-shadow: 3px 3px #0b1d33, 5px 5px #07142b, 7px 7px #000000;
+}
+
+#todo-form input[type='text'] {
+  width: 500px;
+  text-align: center;
+  padding: 5px 20px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  border-radius: 7px;
+}
+
+#todo-form input[type='text']::placeholder {
+  color: black;
+}
+
+#todo-list {
+  margin-top: 20px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: center;
+}
+
+#todo-list li span {
+  font-size: 30px;
+  text-shadow: 1px 1px #0b1d33, 2px 2px #07142b, 3px 3px #000000;
+  list-style: none;
+}
+
+#todo-list li button {
+  font-size: 23px;
+  text-shadow: 1px 1px #0b1d33, 2px 2px #07142b, 3px 3px #000000;
+  background: none;
+  border: none;
+}
+
+#quotes-box {
+  position: absolute;
+  bottom: 100px;
+}
+
+#quotes-box h3 {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+#quotes-box p {
+  font-size: 15px;
+  font-weight: 100;
+}
+
+#weather {
+  position: absolute;
+  bottom: 20px;
+  font-size: 15px;
+  font-weight: 100;
+}
